@@ -1,4 +1,4 @@
-# Mortgage Application Sample
+## Mortgage Application Sample
 The Mortgage Application sample is comprised of a COBOL application and Groovy build scripts that use IBM Dependency Based Build (DBB) APIs to build the application for execution on z/OS. The sample demonstrates the following build functions:
 * How to use property files for build configuration
 * How to handle build script command line arguments
