@@ -25,15 +25,15 @@
 
 #Below is needed of ZOS, if on windows it will cause fatal errors when trying to add back into git, so remove them, but do not check this file back in to git
 #If running in normal DBB setup, uncomment below lines.  If running in pipeline with encoding set on directories, make sure these are commented
-*.cpy working-tree-encoding=ibm-1047 git-encoding=utf-8
-*.cbl working-tree-encoding=ibm-1047 git-encoding=utf-8
-*.bms working-tree-encoding=ibm-1047 git-encoding=utf-8
-*.pli working-tree-encoding=ibm-1047 git-encoding=utf-8
-*.mfs working-tree-encoding=ibm-1047 git-encoding=utf-8
-*.bnd working-tree-encoding=ibm-1047 git-encoding=utf-8
-*.lnk working-tree-encoding=ibm-1047 git-encoding=utf-8
-*.rex working-tree-encoding=ibm-1047 git-encoding=utf-8
-*.txt working-tree-encoding=ibm-1047 git-encoding=utf-8
-*.groovy working-tree-encoding=ibm-1047 git-encoding=utf-8
-*.sh working-tree-encoding=ibm-1047 git-encoding=utf-8
-*.properties working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.cpy working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.cbl working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.bms working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.pli working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.mfs working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.bnd working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.lnk working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.rex working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.txt working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.groovy working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.sh working-tree-encoding=ibm-1047 git-encoding=utf-8
+#*.properties working-tree-encoding=ibm-1047 git-encoding=utf-8
