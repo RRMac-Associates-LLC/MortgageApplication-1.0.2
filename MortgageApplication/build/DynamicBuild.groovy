@@ -12,11 +12,11 @@ println("** gitURL="+gitURL)
 println("** gitBranch="+gitBranch)
 
 println("** copy file.txt to file-original.txt")
-def src = new File("$CODE_BASE_DIR/MortgageApplication/build/file.txt")
-def dst = new File("$CODE_BASE_DIR/MortgageApplication/build/file-original1.txt")
+def src = new File("$CODE_BASE_DIR/MortgageApplication/build/files.txt")
+def dst = new File("$CODE_BASE_DIR/MortgageApplication/build/files-original1.txt")
 dst << src.text
 
-def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/file.txt")
+def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/fils.txt")
 
 //commitInfo=$($gitScript ls-remote $gitURL $gitBranch)
 def proc = "$gitScript ls-remote $gitURL $gitBranch".execute()
