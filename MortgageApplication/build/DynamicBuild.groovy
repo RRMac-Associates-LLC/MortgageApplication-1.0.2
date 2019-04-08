@@ -21,7 +21,7 @@ Files.copy(source, target)
 def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/file.txt")
 
 //commitInfo=$($gitScript ls-remote $gitURL $gitBranch)
-def proc = "$gitScript ls-remote $gitURL $gitBranch".execute()"
+def proc = "$gitScript ls-remote $gitURL $gitBranch".execute()
 def b = new StringBuffer()
 proc.consumeProcessErrorStream(b)
 
