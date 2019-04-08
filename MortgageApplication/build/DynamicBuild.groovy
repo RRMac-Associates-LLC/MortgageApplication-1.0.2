@@ -11,12 +11,10 @@ println("** gitScript="+gitScript)
 println("** gitURL="+gitURL)
 println("** gitBranch="+gitBranch)
 
-//copy file.txt
-Path source = "$CODE_BASE_DIR/MortgageApplication/build/file.txt"
-Path target = "$CODE_BASE_DIR/MortgageApplication/build/file-original.txt"
-
 println("** copy file.txt to file-original.txt")
-Files.copy(source, target)
+def src = new File("$CODE_BASE_DIR/MortgageApplication/build/file.txt")
+def dst = new File("$CODE_BASE_DIR/MortgageApplication/build/file-original1.txt")
+dst << src.text
 
 def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/file.txt")
 
@@ -27,3 +25,23 @@ proc.consumeProcessErrorStream(b)
 
 println proc.text
 println b.toString()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
