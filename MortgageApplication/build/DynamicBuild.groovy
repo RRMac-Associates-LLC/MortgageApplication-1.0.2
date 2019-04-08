@@ -9,4 +9,21 @@ println("** in DynamicBuild.grooy **")
 println("** CODE_BASE_DIR="+CODE_BASE_DIR)
 println("** gitScript="+gitScript)
 println("** gitURL="+gitURL)
-println("** gitBranch=")
+println("** gitBranch="+gitBranch)
+
+//copy file.txt
+Path source = "$CODE_BASE_DIR/MortgageApplication/build/file.txt"
+Path target = "$CODE_BASE_DIR/MortgageApplication/build/file-original.txt"
+
+println("** copy file.txt to file-original.txt")
+Files.copy(source, target)
+
+def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/file.txt")
+
+//commitInfo=$($gitScript ls-remote $gitURL $gitBranch)
+def proc = "git command args".execute()
+def b = new StringBuffer()
+proc.consumeProcessErrorStream(b)
+
+println proc.text
+println b.toString()
