@@ -23,7 +23,7 @@ def proc = "$gitScript ls-remote $gitURL $gitBranch".execute()
 def commitID=proc.text.split()
 println "commitID="+commitID[0]
 
-
+println "$gitScript diff --name-only $commitID[0] HEAD~1"
 def proc2 = "$gitScript diff --name-only $commitID[0] HEAD~1".execute()
 def gitChanges=proc2.text
 println "gitChanges="+gitChanges
