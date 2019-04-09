@@ -21,7 +21,8 @@ dst << src.text
 //commitInfo=$($gitScript ls-remote $gitURL $gitBranch)
 def proc = "$gitScript ls-remote $gitURL $gitBranch".execute()
 def commitIDs=proc.text.split()
-println "commitID="+commitIDs[0]
+def commitID=commitIDs[0]
+println "commitID="+commitID
 
 println "$gitScript diff --name-only $commitID HEAD~1"
 def proc2 = "$gitScript diff --name-only $commitID HEAD~1".execute()
