@@ -22,9 +22,14 @@ def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/fils.txt")
 def proc = "$gitScript ls-remote $gitURL $gitBranch".execute()
 def b = new StringBuffer()
 proc.consumeProcessErrorStream(b)
-
 println "proc.text="+proc.text
-println "b.toString="+b.toString()
+
+def commitID=proc.text
+
+proc = "$gitScript diff --name-only $commitId HEAD~1".execute()
+proc.consumeProcessErrorStream(b)
+def gitChanges=proc.text
+println "proc.text="+proc.text
 
 
 
