@@ -23,8 +23,8 @@ def proc = "$gitScript ls-remote $gitURL $gitBranch".execute()
 def b = new StringBuffer()
 proc.consumeProcessErrorStream(b)
 
-println proc.text
-println b.toString()
+println "proc.text="+proc.text
+println "b.toString="+b.toString()
 
 
 
