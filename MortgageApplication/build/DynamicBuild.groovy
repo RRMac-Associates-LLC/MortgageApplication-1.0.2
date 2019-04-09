@@ -39,7 +39,7 @@ def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/fils.txt")
 for(obj in gitChanges) 
 {
     println "obj="+obj
-    outFile.writeln obj
+    outFile.println obj
 }
 
 
