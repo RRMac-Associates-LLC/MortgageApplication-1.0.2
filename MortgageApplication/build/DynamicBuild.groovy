@@ -25,8 +25,6 @@ println "commitID="+commitID[0]
 
 
 def proc2 = "$gitScript diff --name-only $commitID[0] HEAD~1".execute()
-def b2 = new StringBuffer()
-proc2.consumeProcessErrorStream(b2)
 def gitChanges=proc2.text
 println "proc2.text="+proc2.text
 
