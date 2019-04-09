@@ -32,15 +32,15 @@ def gitChanges=proc2.text.split()
 println "gitChanges="+gitChanges
 def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/fils.txt")
 
-outFile.withWriter{ out -> 
-  gitChanges.each {out.println it.name}
-}
-
-//for(obj in gitChanges) 
-//{
-//    println "obj="+obj
-//    outFile.writeln obj
+//outFile.withWriter{ out -> 
+//  gitChanges.each {out.println it.name}
 //}
+
+for(obj in gitChanges) 
+{
+    println "obj="+obj
+    outFile.writeln obj
+}
 
 
 
