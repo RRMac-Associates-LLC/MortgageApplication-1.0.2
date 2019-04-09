@@ -23,7 +23,7 @@ def proc = "$gitScript ls-remote $gitURL $gitBranch".execute()
 def b = new StringBuffer()
 def commitID=proc.text
 proc.consumeProcessErrorStream(b)
-println "proc.text="+proc.text
+println "commitID="+commitID
 
 
 
