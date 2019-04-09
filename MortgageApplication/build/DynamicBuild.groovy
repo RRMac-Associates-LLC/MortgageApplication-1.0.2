@@ -20,10 +20,9 @@ def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/fils.txt")
 
 //commitInfo=$($gitScript ls-remote $gitURL $gitBranch)
 def proc = "$gitScript ls-remote $gitURL $gitBranch".execute()
-def b = new StringBuffer()
 def commitID=proc.text
-proc.consumeProcessErrorStream(b)
 println "commitID="+commitID
+
 
 
 
