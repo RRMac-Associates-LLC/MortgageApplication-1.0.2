@@ -24,7 +24,7 @@ def commitID=proc.text.split()
 println "commitID="+commitID[0]
 
 
-def proc2 = "$gitScript diff --name-only $commitId[0] HEAD~1".execute()
+def proc2 = "$gitScript diff --name-only $commitID[0] HEAD~1".execute()
 def b2 = new StringBuffer()
 proc2.consumeProcessErrorStream(b2)
 def gitChanges=proc2.text
