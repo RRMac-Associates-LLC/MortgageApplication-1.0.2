@@ -13,8 +13,9 @@ println("** gitBranch="+gitBranch)
 
 println("** copy file.txt to file-original.txt")
 def src = new File("$CODE_BASE_DIR/MortgageApplication/build/files.txt")
-def dst = new File("$CODE_BASE_DIR/MortgageApplication/build/files-original1.txt")
-dst << src.text
+src.renameTo "$CODE_BASE_DIR/MortgageApplication/build/files-original1.txt"
+//def dst = new File("$CODE_BASE_DIR/MortgageApplication/build/files-original1.txt")
+//dst << src.text
 
 //def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/fils.txt")
 
@@ -29,10 +30,18 @@ def proc2 = "$gitScript diff --name-only $commitID HEAD~1".execute()
 def gitChanges=proc2.text.split()
 
 println "gitChanges="+gitChanges
-for(obj in gitChanges) 
-{
-    println "obj="+obj
+def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/fils.txt")
+
+outFile.withWriter
+{ 
+  out -> gitChanges.each {out.println it.name}
 }
+
+//for(obj in gitChanges) 
+//{
+//    println "obj="+obj
+//    outFile.writeln obj
+//}
 
 
 
