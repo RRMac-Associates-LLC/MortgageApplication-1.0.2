@@ -17,7 +17,7 @@ src.renameTo "$CODE_BASE_DIR/MortgageApplication/build/files-original1.txt"
 //def dst = new File("$CODE_BASE_DIR/MortgageApplication/build/files-original1.txt")
 //dst << src.text
 
-//def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/fils.txt")
+//def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/files.txt")
 
 //commitInfo=$($gitScript ls-remote $gitURL $gitBranch)
 def proc = "$gitScript ls-remote $gitURL $gitBranch".execute()
@@ -30,7 +30,7 @@ def proc2 = "$gitScript diff --name-only $commitID HEAD~1".execute()
 def gitChanges=proc2.text.split()
 
 println "gitChanges="+gitChanges
-def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/fils.txt")
+File outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/files.txt")
 
 //outFile.withWriter{ out -> 
 //  gitChanges.each {out.println it.name}
@@ -39,7 +39,7 @@ def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/fils.txt")
 for(obj in gitChanges) 
 {
     println "obj="+obj
-    outFile.println obj
+    outFile << obj
 }
 
 
