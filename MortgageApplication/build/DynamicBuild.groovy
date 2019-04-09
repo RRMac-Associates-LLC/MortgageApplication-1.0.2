@@ -26,9 +26,13 @@ println "commitID="+commitID
 
 println "$gitScript diff --name-only $commitID HEAD~1"
 def proc2 = "$gitScript diff --name-only $commitID HEAD~1".execute()
-def gitChanges=proc2.text
-println "gitChanges="+gitChanges
+def gitChanges=proc2.text.split()
 
+println "gitChanges="+gitChanges
+for(obj in gitChanges) 
+{
+    println "obj="+obj
+}
 
 
 
