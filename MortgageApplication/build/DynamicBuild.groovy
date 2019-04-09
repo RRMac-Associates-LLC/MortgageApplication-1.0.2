@@ -11,9 +11,11 @@ println("** gitScript="+gitScript)
 println("** gitURL="+gitURL)
 println("** gitBranch="+gitBranch)
 
-println("** copy file.txt to file-original.txt")
+def now = new Date()
+def timestamp = now.format("yyyyMMdd-HHmmss.SSS", TimeZone.getTimeZone('UTC'))
+println("** copy file.txt to file-$timestamp.txt")
 def src = new File("$CODE_BASE_DIR/MortgageApplication/build/files.txt")
-src.renameTo "$CODE_BASE_DIR/MortgageApplication/build/files-original1.txt"
+src.renameTo "$CODE_BASE_DIR/MortgageApplication/build/files-$timestamp.txt"
 //def dst = new File("$CODE_BASE_DIR/MortgageApplication/build/files-original1.txt")
 //dst << src.text
 
