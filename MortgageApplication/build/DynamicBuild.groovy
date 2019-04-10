@@ -69,7 +69,11 @@ if(previousCommitID != commitID)
     for(obj in gitChanges) 
     {
         println "obj="+obj
-        outFile << obj
+        //outFile << obj
+ 
+        outFile.withWriterAppend{ out ->
+                out.println obj
+        }
     }
     
     //update last commitID in file
