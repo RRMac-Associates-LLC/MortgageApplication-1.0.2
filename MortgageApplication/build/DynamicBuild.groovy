@@ -36,7 +36,7 @@ File lastCommitIDBuiltFile = new File(CODE_BASE_DIR+'/lastCommitIDBuilt.txt')
 String previousCommitID = ""
 
 //set prevoiusCommitID to the needed type
-if(!lastCommitIDBuiltFile.exists() || lastCommitIDBuiltFile.text)
+if(!lastCommitIDBuiltFile.exists() || lastCommitIDBuiltFile.text == '')
 {
     previousCommitID = "HEAD~1"
 }
