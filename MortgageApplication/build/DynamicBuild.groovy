@@ -35,6 +35,7 @@ println "commitID="+commitID
 File lastCommitIDBuiltFile = new File(CODE_BASE_DIR+'/lastCommitIDBuilt.txt')
 String previousCommitID = ""
 
+//set prevoiusCommitID to the needed type
 if(!lastCommitIDBuiltFile.exists() || lastCommitIDBuiltFile.text)
 {
     previousCommitID = "HEAD~1"
@@ -45,7 +46,6 @@ else
 }
 
 println "previousCommitID="+previousCommitID
-
 
 if(previousCommitID != commitID)
 {    
@@ -67,7 +67,11 @@ if(previousCommitID != commitID)
         outFile << obj
     }
     
-    lastCommitIDBuiltFile << commitID
+    //update last commitID in file
+    lastCommitIDBuiltFile.withWriter { writer ->
+        writer.write(commitID)
+    }
+     
 }
 else
 {
