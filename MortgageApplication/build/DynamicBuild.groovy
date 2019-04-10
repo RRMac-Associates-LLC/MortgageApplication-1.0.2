@@ -15,11 +15,16 @@ println("** gitBranch="+gitBranch)
 //backup files.txt that is coming in from git
 def now = new Date()
 def timestamp = now.format("yyyyMMdd-HHmmss.SSS", TimeZone.getTimeZone('UTC'))
-println("** copy file.txt to file-" + timestamp + ".txt")
+//println("** copy file.txt to file-" + timestamp + ".txt")
+println("** copy file.txt to file-original.txt")
 def src = new File("$CODE_BASE_DIR/MortgageApplication/build/files.txt")
-src.renameTo "$CODE_BASE_DIR/MortgageApplication/build/files-" + timestamp + ".txt"
-//def dst = new File("$CODE_BASE_DIR/MortgageApplication/build/files-original1.txt")
-//dst << src.text
+//src.renameTo "$CODE_BASE_DIR/MortgageApplication/build/files-" + timestamp + ".txt"
+def dst = new File("$CODE_BASE_DIR/MortgageApplication/build/files-original.txt")
+dst << src.text
+//clean out files.txt
+src.withWriter { writer ->
+        writer.write("")
+}
 
 //def outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/files.txt")
 
