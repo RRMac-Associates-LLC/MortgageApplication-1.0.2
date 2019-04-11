@@ -58,7 +58,7 @@ if(previousCommitID != commitID)
     println "$gitScript diff --name-only $commitID $previousCommitID"
     def proc2 = "$gitScript diff --name-only $commitID HEAD~1".execute()
     def gitChanges=proc2.text.split()
-    println "proc2.text="+proc2.text    
+    println "proc2.text="+gitChanges  
 
     println "gitChanges="+gitChanges
     File outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/files.txt")
