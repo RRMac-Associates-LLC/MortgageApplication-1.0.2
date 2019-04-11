@@ -60,6 +60,7 @@ if(previousCommitID != commitID)
     //$gitScript diff --name-only $commitID HEAD~1
     println "$gitScript diff --name-only $commitID $previousCommitID"
     def proc2 = "$gitScript diff --name-only $commitID HEAD~1".execute()
+    println "proc2.text="+proc2.text    
     def gitChanges=proc2.text.split()
     println "proc2.text="+gitChanges  
 
