@@ -40,6 +40,9 @@ println "commitID="+commitID
 File lastCommitIDBuiltFile = new File(CODE_BASE_DIR+'/lastCommitIDBuilt.txt')
 String previousCommitID = ""
 
+//test from command line
+// /usr/lpp/IBM/dbb/groovy-2.4.12/groovyz /u/jenkins/workspace/GIT_Project/testDBB1.0.2/MortgageApplication/build/DynamicBuild.groovy
+
 //set prevoiusCommitID to the needed type
 if(!lastCommitIDBuiltFile.exists() || lastCommitIDBuiltFile.text == '')
 {
