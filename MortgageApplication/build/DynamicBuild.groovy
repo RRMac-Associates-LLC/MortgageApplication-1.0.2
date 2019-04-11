@@ -59,12 +59,11 @@ if(previousCommitID != commitID)
 {    
     //$gitScript diff --name-only $commitID HEAD~1
     println "$gitScript diff --name-only $commitID $previousCommitID"
-    def proc2 = "$gitScript diff --name-only $commitID HEAD~1".execute()
-    println "proc2.text="+proc2.text    
+    def proc2 = "$gitScript diff --name-only $commitID $previousCommitID".execute()    
     def gitChanges=proc2.text.split()
-    println "proc2.text="+gitChanges  
+    println "proc2.text="+gitChanges.length  
 
-    println "gitChanges="+gitChanges
+    println "gitChanges="+gitChanges[]
     File outFile = new File("$CODE_BASE_DIR/MortgageApplication/build/files.txt")
 
     //outFile.withWriter{ out -> 
