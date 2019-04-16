@@ -14,7 +14,7 @@
       *       MONTHLY PAYMENT
       *
       *    (C) 2008 IBM - Jim Hildner
-      * comment added by bpratt 20190410 change 9  
+      * comment added by bpratt 20190410 change 10
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
        SOURCE-COMPUTER. FLEX-ES.
