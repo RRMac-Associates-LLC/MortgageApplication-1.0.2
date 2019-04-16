@@ -7,7 +7,6 @@
       *    CURRENT DATE.
       *
       *    (C) 2017 IBM - JIM HILDNER RESERVED.
-	  * changed by bpratt 4-16-2019
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
        SOURCE-COMPUTER. IBM-FLEX-ES.
