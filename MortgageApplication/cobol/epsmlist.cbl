@@ -6,7 +6,7 @@
       *    AN INTEGER IN A CALLED PROGRAM TO DETERMINE DAYS FROM
       *    CURRENT DATE.  Changed RRM 1/7/19 6:47pm
       *
-      *    changed by bpratt 4-3-2019
+      *    changed by bpratt 4-26-2019
       *    (C) 2008 IBM - JIM HILDNER RESERVED.
       * comment added by bpratt 20190410 ...change 11
        ENVIRONMENT DIVISION.
