@@ -13,7 +13,7 @@
       *       INTEREST RATE
       *    OUTPUT:
       *       MONTHLY PAYMENT
-      *    19
+      *    20
       *    (C) 2008 IBM - Jim Hildner
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
