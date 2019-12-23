@@ -8,7 +8,7 @@
       *
       *    changed by bpratt 4-26-2019
       *    (C) 2008 IBM - JIM HILDNER RESERVED.
-      * comment added by bpratt 20191223 ...change 34
+      * comment added by bpratt 20191223 ...change 35
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
        SOURCE-COMPUTER. IBM-FLEX-ES.
