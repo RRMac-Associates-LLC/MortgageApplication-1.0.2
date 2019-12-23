@@ -13,7 +13,7 @@
       *       INTEREST RATE
       *    OUTPUT:
       *       MONTHLY PAYMENT
-      *    change 23
+      *    20191223 ...change 34
       *    (C) 2008 IBM - Jim Hildner
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
